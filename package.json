@@ -1,0 +1,58 @@
+{
+  "_from": "qlik-sense-qrs",
+  "_id": "qlik-sense-qrs@0.1.1",
+  "_inBundle": false,
+  "_integrity": "sha512-egNqQvrTAUV0zsXpglAhvtPbDL7ziQx0JjLL8KiuulDNA+HCzyBpmS02Usht4/PclxfQZ8ywW+UbncYnNRMHYg==",
+  "_location": "/qlik-sense-qrs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "qlik-sense-qrs",
+    "name": "qlik-sense-qrs",
+    "escapedName": "qlik-sense-qrs",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/qlik-sense-qrs/-/qlik-sense-qrs-0.1.1.tgz",
+  "_shasum": "2ccefd5cb539d22f904983de75b026268dd2ff69",
+  "_spec": "qlik-sense-qrs",
+  "_where": "D:\\Usuario\\Escritorio\\QRS_MS",
+  "author": {
+    "name": "Pangodream"
+  },
+  "bugs": {
+    "url": "https://github.com/pangodream/qlik-sense-task/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "axios": "^0.19.2",
+    "crypto-js": "^4.0.0"
+  },
+  "deprecated": false,
+  "description": "Qlik Sense QRS API wrapper (using a server certificate)",
+  "homepage": "https://github.com/pangodream/qlik-sense-task#readme",
+  "keywords": [
+    "qliksense",
+    "qrs",
+    "api",
+    "nodejs",
+    "task"
+  ],
+  "license": "MIT",
+  "main": "src/qlik-sense-qrs.js",
+  "name": "qlik-sense-qrs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pangodream/qlik-sense-qrs.git"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "version": "0.1.1"
+}
