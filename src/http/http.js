@@ -12,6 +12,12 @@ const fs = require('fs');
  */
 const config = require('../config/config');
 
+
+/**** Pendiente Arreglar ******/
+const qsqrs = require('qlik-sense-qrs');
+var config_qrs = require('......../config/config.js');
+
+
 /**
  * Axios GET and POST methods wrapping
  * We wrap both methods to use our own server certificate and encapsulate 
@@ -25,6 +31,7 @@ const config = require('../config/config');
  * @returns {Promise} Response to the request or throws an error
  */
 exports.get = async (path, hdrs = {}, options = '') => {
+    qsqrs.config.apply(config_qrs.ops[hdrs.srvcfg]);
     let headers = getHeaders(hdrs.userdirectory, hdrs.userid);
     let httpsAgent = getHttpsAgent();
     //Compose querystring
@@ -40,6 +47,7 @@ exports.get = async (path, hdrs = {}, options = '') => {
  * @returns {Promise} Response to the request or throws an error
  */
 exports.post = async (path, data = {}, hdrs = {}, options = '') => {
+    qsqrs.config.apply(config_qrs.ops[hdrs.srvcfg]);
     let headers = getHeaders(hdrs.userdirectory, hdrs.userid);
     let httpsAgent = getHttpsAgent();
     //Compose querystring
@@ -55,6 +63,7 @@ exports.post = async (path, data = {}, hdrs = {}, options = '') => {
  * @returns {Promise} Response to the request or throws an error
  */
 exports.put = async (path, data = {}, hdrs = {}, options = '') => {
+    qsqrs.config.apply(config_qrs.ops[hdrs.srvcfg]);
     let headers = getHeaders(hdrs.userdirectory, hdrs.userid);
     let httpsAgent = getHttpsAgent();
     //Compose querystring
@@ -70,6 +79,7 @@ exports.put = async (path, data = {}, hdrs = {}, options = '') => {
  * @returns {Promise} Response to the request or throws an error
  */
 exports.delete = async (path, hdrs = {}, options = '') => {
+    qsqrs.config.apply(config_qrs.ops[hdrs.srvcfg]);
     let headers = getHeaders(hdrs.userdirectory, hdrs.userid);
     let httpsAgent = getHttpsAgent();
     //Compose querystring
