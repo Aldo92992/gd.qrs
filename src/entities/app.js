@@ -44,31 +44,31 @@ exports.delete = async (id, headers = {}, filter = '') => {
     return (dt.data);
 };
 
-exports.copy = async (id, name, headers = {}, filter = '') => {
+exports.copy = async (id, name, data = {}, headers = {}, filter = '') => {
     let path = '/app/' + id + '/copy?name=' + name;
     if (filter !== '') filter = '&filter=' + filter;
-    let dt = await http.post(path, headers, filter);
+    let dt = await http.post(path, data, headers, filter);
     return (dt.data);
 };
 
-exports.publish = async (id, ids, headers = {}, filter = '') => {
+exports.publish = async (id, ids, data = {}, headers = {}, filter = '') => {
     let path = '/app/' + id + '/publish?stream=' + ids;
     if (filter !== '') filter = '&filter=' + filter;
-    let dt = await http.put(path, headers, filter);
+    let dt = await http.put(path, data, headers, filter);
     return (dt.data);
 };
 
-exports.reload = async (id, headers = {}, filter = '') => {
+exports.reload = async (id, data = {}, headers = {}, filter = '') => {
     let path = '/app/' + id + '/reload';
     if (filter !== '') filter = '&filter=' + filter;
-    let dt = await http.post(path, headers, filter);
+    let dt = await http.post(path, data, headers, filter);
     return (dt.data);
 };
 
-exports.replace = async (id, idapp, headers = {}, filter = '') => {
+exports.replace = async (id, idapp, data = {}, headers = {}, filter = '') => {
     let path = '/app/' + id + '/replace?app=' + idapp;
     if (filter !== '') filter = '&filter=' + filter;
-    let dt = await http.put(path, headers, filter);
+    let dt = await http.put(path, data, headers, filter);
     return (dt.data);
 };
 
