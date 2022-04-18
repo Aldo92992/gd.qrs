@@ -15,7 +15,7 @@ const config = require('../config/config');
 
 /**** Pendiente Arreglar ******/
 const qsqrs = require('qlik-sense-qrs');
-var config_qrs = require('......../config/config.js');
+var config_qrs = require('../../../../config/config.js');
 
 
 /**
